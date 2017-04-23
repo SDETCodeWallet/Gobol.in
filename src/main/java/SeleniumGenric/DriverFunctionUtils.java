@@ -1,4 +1,4 @@
-package Genric;
+package SeleniumGenric;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -22,7 +22,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-public class DriverFunctionUtils extends DriverUtils{
+public class DriverFunctionUtils extends DriverUtils {
 
 	public static void clickOnWebelement(WebElement we) {
 		we.click();
@@ -47,9 +47,9 @@ public class DriverFunctionUtils extends DriverUtils{
 		Assert.assertEquals(actualTitle, expectedtitle);
 	}
 
-	public static void getText(WebElement we) {
+	public static String getText(WebElement we) {
 		String text = we.getText();
-		System.out.println(text);
+		return text;
 	}
 
 	public static void getTextOfAllLinks(List<WebElement> alllinkscollection) {
@@ -87,10 +87,25 @@ public class DriverFunctionUtils extends DriverUtils{
 	}
 
 	public static void clickonradiobutton(WebElement we) {
-		boolean value = we.isEnabled();
+		boolean value = isEnabled(we);
 		if (value == true) {
 			we.click();
 		}
+	}
+
+	public static boolean isDisplayed(WebElement we) {
+		boolean status = we.isDisplayed();
+		return status;
+	}
+
+	public static boolean isSelected(WebElement we) {
+		boolean status = we.isSelected();
+		return status;
+	}
+
+	public static boolean isEnabled(WebElement we) {
+		boolean status = we.isEnabled();
+		return status;
 	}
 
 	public static void tkeScrnshot(String savefileloc) {
@@ -126,9 +141,13 @@ public class DriverFunctionUtils extends DriverUtils{
 	}
 
 	/* Wait Methods */
-	public static void explictWait(int timedur, By locator) throws InterruptedException {
+	public static void explictWait(int timedur, WebElement we) {
+		try{
 		WebDriverWait wait = new WebDriverWait(driver, timedur);
-		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
+		wait.until(ExpectedConditions.visibilityOf(we));
+		}catch(Exception e){
+			e.printStackTrace();
+		}
 
 	}
 
@@ -205,9 +224,9 @@ public class DriverFunctionUtils extends DriverUtils{
 		driver.navigate().back();
 	}
 
-	public static String getValue(String propFilePath, String propertyValue) {
+	public static String getValue(String propertyValue) {
 		String St1 = null;
-		File fPath = new File(propFilePath);
+		File fPath = new File("TestResources//config.properties");
 
 		FileInputStream fileinputstream = null;
 

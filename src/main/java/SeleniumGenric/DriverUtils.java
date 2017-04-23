@@ -1,4 +1,4 @@
-package Genric;
+package SeleniumGenric;
 
 import java.io.File;
 import java.net.URL;
@@ -15,7 +15,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class DriverUtils {
 	
-	static WebDriver driver=null;
+	public static WebDriver driver=null;
 
 	public static WebDriver launchbrowser(String Browsername, String url) {
 		if (Browsername.equalsIgnoreCase("ff")) {
