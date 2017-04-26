@@ -9,7 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class WaitUtils extends DriverUtils {
 
-	public void threadSleep(int timeDur) {
+	public static void threadSleep(int timeDur) {
 		try {
 			Thread.sleep(timeDur);
 		} catch (Exception e) {
@@ -17,11 +17,11 @@ public class WaitUtils extends DriverUtils {
 		}
 	}
 
-	public void implictWait(int timeDur, TimeUnit time) {
+	public static void implictWait(int timeDur, TimeUnit time) {
 		driver.manage().timeouts().implicitlyWait(timeDur, time);
 	}
 	
-	public void explictWait(long seconds,WebElement visibileElement){
+	public static void explictWait(long seconds,WebElement visibileElement){
 		WebDriverWait wait=new WebDriverWait(driver, seconds);
 		wait.until(ExpectedConditions.invisibilityOf(visibileElement));
 	}

@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import SeleniumGenric.DriverFunctionUtils;
+import SeleniumGenric.WaitUtils;
 
 public class PHomePage extends DriverFunctionUtils {
 
@@ -45,105 +46,84 @@ public class PHomePage extends DriverFunctionUtils {
 	@FindBy(css = "div.cart")
 	private WebElement cartIcon;
 
-	public class ApplicationHeaderOption {
-		public String fn_Applogo() {
-			clickOnWebelement(appTitle);
-			String titleName = getText(appTitle);
-			return titleName;
-		}
+	@FindBy(xpath = "//a[contains(text(),'Mobiles And Tablets')]")
+	private WebElement mobileTablets;
 
-		public void fn_TrackOrder() {
-			clickOnWebelement(trackOrder);
-		}
+	@FindBy(xpath = "//a[contains(text(),'Laptops')]")
+	private WebElement laptops;
 
-		public PMyAccount fn_MyAccount(String userEmailAdd, String userPassword) {
-			clickOnWebelement(myAccount);
-			boolean status = isDisplayed(loginPopup);
-			PMyAccount navigateToMyAccountPage = null;
-			if (status = true) {
-				System.out.println("inside popup");
-				explictWait(6000, loginPopup);
-//				inputValue(loginPopUpUserEmailAddress, userEmailAdd);
-//				inputValue(loginPopUpUserPassword, userPassword);
-//				clickOnWebelement(loginPopUpLoginSubmitButton);
-			} else if (status = false) {
-				navigateToMyAccountPage = PageFactory.initElements(driver, PMyAccount.class);
-			}
-			return navigateToMyAccountPage;
+	@FindBy(xpath = "//a[contains(text(),'Accessories')]")
+	private WebElement accessories;
 
-		}
+	@FindBy(css = "li.offer1>a")
+	private WebElement sales;
 
-		public void signup() {
-			clickOnWebelement(signUp);
-		}
+	@FindBy(xpath = "//a//div[text()='VIEW All']")
+	private WebElement viewAllButton;
 
-		public void fn_LogOut() {
-			clickOnWebelement(logOut);
-		}
+	public String fn_Applogo() {
+		clickOnWebelement(appTitle);
+		String titleName = getText(appTitle);
+		return titleName;
+	}
 
-		public void fn_SearchBox(String userinput) {
-			inputValue(searchInput, userinput);
-		}
+	public void fn_TrackOrder() {
+		clickOnWebelement(trackOrder);
+	}
 
-		public void fn_SearchButton() {
-			clickOnWebelement(searchBtn);
+	public PMyAccount fn_MyAccount(String userEmailAdd, String userPassword) {
+		clickOnWebelement(myAccount);
+		boolean status = isDisplayed(loginPopup);
+		PMyAccount navigateToMyAccountPage = null;
+		if (status = true) {
+			System.out.println("inside popup");
+			WaitUtils.explictWait(6000, loginPopup);
+			// inputValue(loginPopUpUserEmailAddress, userEmailAdd);
+			// inputValue(loginPopUpUserPassword, userPassword);
+			// clickOnWebelement(loginPopUpLoginSubmitButton);
+		} else if (status = false) {
+			navigateToMyAccountPage = PageFactory.initElements(driver, PMyAccount.class);
 		}
-
-		public void fn_Cart() {
-			clickOnWebelement(cartIcon);
-		}
+		return navigateToMyAccountPage;
 
 	}
 
-	class listingOptions {
-		@FindBy(xpath = "//a[contains(text(),'Mobiles And Tablets')]")
-		private WebElement mobileTablets;
-
-		@FindBy(xpath = "//a[contains(text(),'Laptops')]")
-		private WebElement laptops;
-
-		@FindBy(xpath = "//a[contains(text(),'Accessories')]")
-		private WebElement accessories;
-
-		@FindBy(css = "li.offer1>a")
-		private WebElement sales;
-
-		public void fn_MobileTablets() {
-			clickOnWebelement(mobileTablets);
-		}
-
-		public void fn_Laptops() {
-			clickOnWebelement(laptops);
-		}
-
-		public void fn_Accessories() {
-			clickOnWebelement(accessories);
-		}
-
-		public PSale fn_Sales() {
-			clickOnWebelement(sales);
-			PSale navigateToSalePage = PageFactory.initElements(driver, PSale.class);
-			return navigateToSalePage;
-		}
+	public void signup() {
+		clickOnWebelement(signUp);
 	}
 
-	class bestSellingMobilesTablets {
-
-		@FindBy(xpath = "//a//div[text()='VIEW All']")
-		private WebElement viewAllButton;
-
+	public void fn_LogOut() {
+		clickOnWebelement(logOut);
 	}
 
-	class newArrivals {
-
+	public void fn_SearchBox(String userinput) {
+		inputValue(searchInput, userinput);
 	}
 
-	class clearanceSale {
-
+	public void fn_SearchButton() {
+		clickOnWebelement(searchBtn);
 	}
 
-	class brandAssociatedWithUS {
+	public void fn_Cart() {
+		clickOnWebelement(cartIcon);
+	}
 
+	public void fn_MobileTablets() {
+		clickOnWebelement(mobileTablets);
+	}
+
+	public void fn_Laptops() {
+		clickOnWebelement(laptops);
+	}
+
+	public void fn_Accessories() {
+		clickOnWebelement(accessories);
+	}
+
+	public PSale fn_Sales() {
+		clickOnWebelement(sales);
+		PSale navigateToSalePage = PageFactory.initElements(driver, PSale.class);
+		return navigateToSalePage;
 	}
 
 }
