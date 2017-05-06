@@ -17,13 +17,15 @@ public class HomePageTestCases extends DriverFunctionUtils {
 		PHomePage homePage = PageFactory.initElements(driver, PHomePage.class);
 		homePage.fn_MyAccount("shubham.goyal@attero.in", "123456");
 		JavascriptExecutor je = null;
-		je.executeScript("document.getElementById('email').value='samsung'");
-
+		je.executeScript("document.getElementById('email').setAttribute('value', 'shubham.goyal1234@attero.in')");
+		
 	}
 
 	@Test
 	public void tc() {
 		System.out.println("runner");
 	}
+	
+	
 
 }

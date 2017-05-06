@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="287" started-at="2017-04-26T22:55:00Z" finished-at="2017-04-26T22:55:00Z">
+  <suite name="Default suite" duration-ms="177" started-at="2017-05-04T23:08:22Z" finished-at="2017-05-04T23:08:22Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="287" started-at="2017-04-26T22:55:00Z" finished-at="2017-04-26T22:55:00Z">
+    <test name="Default test" duration-ms="177" started-at="2017-05-04T23:08:22Z" finished-at="2017-05-04T23:08:22Z">
       <class name="BVTTestCases.HomePageTestCases">
-        <test-method status="PASS" signature="tc()[pri:0, instance:BVTTestCases.HomePageTestCases@66a3ffec]" name="tc" duration-ms="43" started-at="2017-04-26T15:55:00Z" finished-at="2017-04-26T15:55:00Z">
+        <test-method status="PASS" signature="tc()[pri:0, instance:BVTTestCases.HomePageTestCases@47c62251]" name="tc" duration-ms="95" started-at="2017-05-04T16:08:22Z" finished-at="2017-05-04T16:08:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tc -->
