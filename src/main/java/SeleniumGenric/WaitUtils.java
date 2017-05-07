@@ -23,7 +23,7 @@ public class WaitUtils extends DriverUtils {
 	
 	public static void explictWait(long seconds,WebElement visibileElement){
 		WebDriverWait wait=new WebDriverWait(driver, seconds);
-		wait.until(ExpectedConditions.invisibilityOf(visibileElement));
+		wait.until(ExpectedConditions.visibilityOf(visibileElement));
 	}
 
 }

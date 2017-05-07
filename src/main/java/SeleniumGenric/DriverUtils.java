@@ -2,6 +2,7 @@ package SeleniumGenric;
 
 import java.io.File;
 import java.net.URL;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
@@ -19,22 +20,24 @@ public class DriverUtils {
 
 	public static WebDriver launchbrowser(String Browsername, String url) {
 		if (Browsername.equalsIgnoreCase("ff")) {
-			System.setProperty("webdriver.gecko.driver", "Drivers/geckodriverfirefox.exe");
+			System.setProperty("webdriver.gecko.driver", "drivers/geckodriver.exe");
 			driver = new FirefoxDriver();
 		} else if (Browsername.equalsIgnoreCase("ch")) {
 			System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
 			driver = new ChromeDriver();
 		} else if (Browsername.equalsIgnoreCase("iE")) {
-			System.setProperty("webdriver.ie.driver", "Drivers/IEDriverServer.exe");
+			System.setProperty("webdriver.ie.driver", "drivers/IEDriverServer.exe");
 			driver = new InternetExplorerDriver();
 		} else if (Browsername.equalsIgnoreCase("ed")) {
-			System.setProperty("webdriver.edge.driver", "Drivers/MicrosoftWebDriver.exe");
+			System.setProperty("webdriver.edge.driver", "drivers/MicrosoftWebDriver.exe");
 			driver = new EdgeDriver();
 
 		}
 		// driver.manage().window().maximize();
 		// driver.manage().timeouts().implicitlyWait(5000, TimeUnit.SECONDS);
 		driver.get(url);
+//		driver.manage().timeouts().implicitlyWait(2000, TimeUnit.SECONDS);
+//		driver.manage().window().maximize();
 		return driver;
 
 	}

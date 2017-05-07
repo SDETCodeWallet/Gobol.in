@@ -33,7 +33,7 @@ public class DriverFunctionUtils extends DriverUtils {
 		inputelement.sendKeys(userinput);
 	}
 
-	public static void inputnumericvalue(WebElement inputelement, int userinput) {
+	public static void inputNumericValue(WebElement inputelement, int userinput) {
 		String stringvalue = Integer.toString(userinput);
 		inputelement.sendKeys(stringvalue);
 	}
@@ -66,8 +66,7 @@ public class DriverFunctionUtils extends DriverUtils {
 
 	public static void clickOnAllLinks(List<WebElement> alllinkscollection) {
 		int totallinks = alllinkscollection.size();
-		System.out.println(totallinks);
-
+  System.out.println(totallinks);
 		for (int i = 0; i <= totallinks - 1; i++) {
 			WebElement perlink = alllinkscollection.get(i);
 			perlink.click();
@@ -142,10 +141,10 @@ public class DriverFunctionUtils extends DriverUtils {
 
 	/* Wait Methods */
 	public static void explictWait(int timedur, WebElement we) {
-		try{
-		WebDriverWait wait = new WebDriverWait(driver, timedur);
-		wait.until(ExpectedConditions.visibilityOf(we));
-		}catch(Exception e){
+		try {
+			WebDriverWait wait = new WebDriverWait(driver, timedur);
+			wait.until(ExpectedConditions.visibilityOf(we));
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 

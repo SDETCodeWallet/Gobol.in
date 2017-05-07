@@ -5,7 +5,7 @@
     <classes>
       <class name="BVTTestCases.HomePageTestCases">
         <methods>
-          <include name="tc"/>
+          <include name="myAccountLinks"/>
           <include name="launchApp"/>
         </methods>
       </class> <!-- BVTTestCases.HomePageTestCases -->
