@@ -1,74 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="1" total="3" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="121329" started-at="2017-05-07T07:54:53Z" finished-at="2017-05-07T07:56:54Z">
+  <suite name="Default suite" duration-ms="70530" started-at="2017-05-08T17:04:57Z" finished-at="2017-05-08T17:06:08Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="121329" started-at="2017-05-07T07:54:53Z" finished-at="2017-05-07T07:56:54Z">
-      <class name="BVTTestCases.HomePageTestCases">
-        <test-method status="PASS" signature="launchApp()[pri:0, instance:BVTTestCases.HomePageTestCases@6093dd95]" name="launchApp" is-config="true" duration-ms="18356" started-at="2017-05-07T13:24:53Z" finished-at="2017-05-07T13:25:11Z">
+    <test name="Default test" duration-ms="70530" started-at="2017-05-08T17:04:57Z" finished-at="2017-05-08T17:06:08Z">
+      <class name="BVTTestCases.MyAccountPageTestCase">
+        <test-method status="PASS" signature="launchApp()[pri:0, instance:BVTTestCases.MyAccountPageTestCase@6093dd95]" name="launchApp" is-config="true" duration-ms="37406" started-at="2017-05-08T22:34:57Z" finished-at="2017-05-08T22:35:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApp -->
-        <test-method status="PASS" signature="loginUser()[pri:0, instance:BVTTestCases.HomePageTestCases@6093dd95]" name="loginUser" duration-ms="9169" started-at="2017-05-07T13:25:11Z" finished-at="2017-05-07T13:25:20Z">
+        <test-method status="PASS" signature="changePassword()[pri:0, instance:BVTTestCases.MyAccountPageTestCase@6093dd95]" name="changePassword" duration-ms="33087" started-at="2017-05-08T22:35:35Z" finished-at="2017-05-08T22:36:08Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginUser -->
-        <test-method status="PASS" signature="launchApp()[pri:0, instance:BVTTestCases.HomePageTestCases@6093dd95]" name="launchApp" is-config="true" duration-ms="69702" started-at="2017-05-07T13:25:20Z" finished-at="2017-05-07T13:26:30Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- launchApp -->
-        <test-method status="FAIL" signature="myAccountLinks()[pri:0, instance:BVTTestCases.HomePageTestCases@6093dd95]" name="myAccountLinks" duration-ms="23919" started-at="2017-05-07T13:26:30Z" finished-at="2017-05-07T13:26:54Z">
-          <exception class="java.lang.IndexOutOfBoundsException">
-            <message>
-              <![CDATA[Index: 1, Size: 0]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IndexOutOfBoundsException: Index: 1, Size: 0
-	at java.util.ArrayList.rangeCheck(Unknown Source)
-	at java.util.ArrayList.get(Unknown Source)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:39)
-	at com.sun.proxy.$Proxy7.get(Unknown Source)
-	at SeleniumGenric.DriverFunctionUtils.clickOnAllLinks(DriverFunctionUtils.java:71)
-	at GobolPages.PMyAccount.fn_clickOnAllLeftPanelLinks(PMyAccount.java:49)
-	at BVTTestCases.HomePageTestCases.myAccountLinks(HomePageTestCases.java:46)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:744)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
-	at org.testng.TestNG.runSuites(TestNG.java:1144)
-	at org.testng.TestNG.run(TestNG.java:1115)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IndexOutOfBoundsException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- myAccountLinks -->
-      </class> <!-- BVTTestCases.HomePageTestCases -->
+        </test-method> <!-- changePassword -->
+      </class> <!-- BVTTestCases.MyAccountPageTestCase -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

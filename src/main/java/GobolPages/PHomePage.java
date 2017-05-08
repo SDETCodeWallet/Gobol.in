@@ -49,7 +49,7 @@ public class PHomePage extends DriverFunctionUtils {
 	@FindBy(xpath = "//div[@class='header-top']/ul/li/a[@title='Sign Up']")
 	private WebElement signUp;
 
-	@FindBy(xpath = "//div[@class='header-top']/ul/li[5]/a[@title='Log Out']")
+	@FindBy(xpath = "//div[@class='header-top']/ul/li/a[@title='Log Out']")
 	private WebElement logOut;
 
 	@FindBy(css = "input#search")

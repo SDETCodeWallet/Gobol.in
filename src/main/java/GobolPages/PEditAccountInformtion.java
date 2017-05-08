@@ -63,14 +63,15 @@ public class PEditAccountInformtion {
 		DriverFunctionUtils.clickOnWebelement(backButton);
 	}
 
-	public void fn_ClickOnChangePasswordLink(String oldPassword,String newUserPassword,String confirmUserPassword) {
+	public void fn_ClickOnChangePasswordLink() {
 		DriverFunctionUtils.clickOnWebelement(changePasswordLink);
-		if (DriverFunctionUtils.isDisplayed(currentPassword) == true) {
-            DriverFunctionUtils.inputValue(currentPassword, oldPassword);
-            DriverFunctionUtils.inputValue(newPassword, newUserPassword);
-            DriverFunctionUtils.inputValue(confirmNewPassword, newUserPassword);
+	}
+	public void fn_ChangePassword(String oldPassword,String newUserPassword,String confirmNewUserPassword){
+		if(DriverFunctionUtils.isSelected(changePasswordCheckBox)==true){
+		DriverFunctionUtils.inputValue(currentPassword, oldPassword);
+        DriverFunctionUtils.inputValue(newPassword, newUserPassword);
+        DriverFunctionUtils.inputValue(confirmNewPassword, confirmNewUserPassword);
 		}
-
 	}
 
 }
