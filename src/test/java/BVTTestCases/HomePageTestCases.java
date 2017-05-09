@@ -40,7 +40,7 @@ public class HomePageTestCases extends DriverFunctionUtils {
 
 	}
 	
-	@Test
+	@Test(enabled=false)
 	public void myAccountLinks(){
 		loginUser();
 		PMyAccount accountPage=homePage.fn_MyAccount();
