@@ -11,11 +11,11 @@ import org.testng.ITestResult;
 public class Listners implements ITestListener {
 
 	public void onFinish(ITestContext arg0) {
-
+		System.out.println("The name of the finish testcase is :" + arg0.getName());
 	}
 
 	public void onStart(ITestContext arg0) {
-
+		System.out.println("The name of the start testcase is :" + arg0.getName());
 	}
 
 	public void onTestFailedButWithinSuccessPercentage(ITestResult arg0) {

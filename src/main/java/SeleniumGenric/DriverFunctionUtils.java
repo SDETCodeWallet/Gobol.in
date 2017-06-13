@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.sql.DriverManager;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Properties;
@@ -26,6 +27,7 @@ public class DriverFunctionUtils extends DriverUtils {
 
 	public static void clickOnWebelement(WebElement we) {
 		we.click();
+
 	}
 
 	/* send keys */
@@ -66,7 +68,7 @@ public class DriverFunctionUtils extends DriverUtils {
 
 	public static void clickOnAllLinks(List<WebElement> alllinkscollection) {
 		int totallinks = alllinkscollection.size();
-  System.out.println(totallinks);
+		System.out.println(totallinks);
 		for (int i = 0; i <= totallinks - 1; i++) {
 			WebElement perlink = alllinkscollection.get(i);
 			perlink.click();
@@ -225,7 +227,7 @@ public class DriverFunctionUtils extends DriverUtils {
 
 	public static String getValue(String propertyValue) {
 		String St1 = null;
-		File fPath = new File("TestResources//config.properties");
+		File fPath = new File("Resources//config.properties");
 
 		FileInputStream fileinputstream = null;
 

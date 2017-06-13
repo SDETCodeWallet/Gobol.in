@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="59681" started-at="2017-05-09T16:41:31Z" finished-at="2017-05-09T16:42:31Z">
+  <suite name="Default suite" duration-ms="55502" started-at="2017-05-22T17:45:59Z" finished-at="2017-05-22T17:46:54Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="59681" started-at="2017-05-09T16:41:31Z" finished-at="2017-05-09T16:42:31Z">
+    <test name="Default test" duration-ms="55502" started-at="2017-05-22T17:45:59Z" finished-at="2017-05-22T17:46:54Z">
       <class name="BVTTestCases.MyAccountPageTestCase">
-        <test-method status="PASS" signature="launchApp()[pri:0, instance:BVTTestCases.MyAccountPageTestCase@6093dd95]" name="launchApp" is-config="true" duration-ms="23249" started-at="2017-05-09T22:11:31Z" finished-at="2017-05-09T22:11:54Z">
+        <test-method status="PASS" signature="launchApp()[pri:0, instance:BVTTestCases.MyAccountPageTestCase@5383967b]" name="launchApp" is-config="true" duration-ms="27362" started-at="2017-05-22T23:15:59Z" finished-at="2017-05-22T23:16:26Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApp -->
-        <test-method status="PASS" signature="changePassword()[pri:0, instance:BVTTestCases.MyAccountPageTestCase@6093dd95]" name="changePassword" duration-ms="36386" started-at="2017-05-09T22:11:54Z" finished-at="2017-05-09T22:12:31Z">
+        <test-method status="PASS" signature="changePassword()[pri:0, instance:BVTTestCases.MyAccountPageTestCase@5383967b]" name="changePassword" duration-ms="28106" started-at="2017-05-22T23:16:26Z" finished-at="2017-05-22T23:16:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- changePassword -->
