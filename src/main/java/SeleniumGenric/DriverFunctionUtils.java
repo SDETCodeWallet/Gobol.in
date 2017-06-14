@@ -4,6 +4,9 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.sql.DriverManager;
 import java.util.Iterator;
 import java.util.List;
@@ -11,7 +14,10 @@ import java.util.Properties;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.httpclient.HttpURL;
+import org.apache.commons.httpclient.URI;
 import org.apache.commons.io.FileUtils;
+import org.apache.http.HttpConnection;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -73,6 +79,18 @@ public class DriverFunctionUtils extends DriverUtils {
 			WebElement perlink = alllinkscollection.get(i);
 			perlink.click();
 			int totallinks1 = alllinkscollection.size();
+		}
+	}
+	
+	public static void checkBrokenLinks(String urlLink) throws IOException{
+		URL url=new URL(urlLink);
+		HttpURLConnection connection=(HttpURLConnection)url.openConnection();
+		connection.setConnectTimeout(3000);
+		connection.connect();
+		if(connection.getResponseCode()==200){
+			System.out.println();
+		}if(connection.getResponseCode()==connection.HTTP_NOT_FOUND){
+			System.out.println();
 		}
 	}
 
