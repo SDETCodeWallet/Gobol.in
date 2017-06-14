@@ -45,7 +45,7 @@ public class DriverUtils {
 	public static WebDriver launchbrowserforgrid(String Gridbrowsername, Platform pl, String browsername) {
 
 		System.setProperty("webdriver.gecko.driver",
-				"C:////Users////Deepak////workspace////Training_PoaDevEnv////Software////geckodriver.exe");
+				"C://Users//Deepak//workspace//Training_PoaDevEnv//Software//geckodriver.exe");
 		DesiredCapabilities cap = DesiredCapabilities.firefox();
 		cap.setBrowserName(Gridbrowsername);
 		cap.setPlatform(pl);
@@ -61,11 +61,6 @@ public class DriverUtils {
 
 	public static void quitDriver() {
 		driver.quit();
-	}
-
-	public static void clearCookies(WebDriver driver) throws InterruptedException {
-		driver.manage().deleteAllCookies();
-		Thread.sleep(5000);
 	}
 
 	public static void deleteAllCookies() {

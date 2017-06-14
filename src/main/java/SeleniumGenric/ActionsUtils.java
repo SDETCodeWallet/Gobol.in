@@ -15,17 +15,14 @@ public class ActionsUtils {
 	}
 
 	public static void clickOnWebElement(WebElement we) {
-		actn = getActionObj();
 		actn.click(we).build().perform();;
 	}
 	
 	public static void contextClick(){
-		actn=getActionObj();
 		actn.contextClick().build().perform();
 	}
  
 	public static void sendKeys(WebElement we, String inputValue){
-		actn=getActionObj();
 		actn.sendKeys(we, inputValue).build().perform();;
 	}
 }
