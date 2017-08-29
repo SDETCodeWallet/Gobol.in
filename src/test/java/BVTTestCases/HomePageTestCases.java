@@ -14,6 +14,7 @@ import GobolPages.PHomePage;
 import GobolPages.PMyAccount;
 import GobolPages.PtrackOrder;
 import SeleniumGenric.DriverFunctionUtils;
+import SeleniumGenric.DriverUtils;
 
 public class HomePageTestCases extends DriverFunctionUtils {
 
@@ -25,7 +26,7 @@ public class HomePageTestCases extends DriverFunctionUtils {
 		homePage = PageFactory.initElements(driver, PHomePage.class);
 	}
 
-	@Test
+	@Test(enabled=false)
 	public void loginUser() {
 		homePage.fn_LoginUser(getValue("USERNAME"), getValue("PASSWORD"));
 	}
@@ -40,11 +41,16 @@ public class HomePageTestCases extends DriverFunctionUtils {
 
 	}
 	
-	@Test(enabled=false)
-	public void myAccountLinks(){
+	@Test
+	public void myAccountLinksText(){
 		loginUser();
 		PMyAccount accountPage=homePage.fn_MyAccount();
-		accountPage.fn_clickOnAllLeftPanelLinks();
+		accountPage.fn_getAllLeftPanelLinksText();
+	}
+	
+	@AfterMethod
+	public void closeApp(){
+		DriverUtils.closeDriver();
 	}
 
 

@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="2" total="3" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="55502" started-at="2017-05-22T17:45:59Z" finished-at="2017-05-22T17:46:54Z">
+  <suite name="Default suite" duration-ms="25594" started-at="2017-08-05T13:01:03Z" finished-at="2017-08-05T13:01:29Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="55502" started-at="2017-05-22T17:45:59Z" finished-at="2017-05-22T17:46:54Z">
-      <class name="BVTTestCases.MyAccountPageTestCase">
-        <test-method status="PASS" signature="launchApp()[pri:0, instance:BVTTestCases.MyAccountPageTestCase@5383967b]" name="launchApp" is-config="true" duration-ms="27362" started-at="2017-05-22T23:15:59Z" finished-at="2017-05-22T23:16:26Z">
+    <test name="Default test" duration-ms="25594" started-at="2017-08-05T13:01:03Z" finished-at="2017-08-05T13:01:29Z">
+      <class name="BVTTestCases.HomePageTestCases">
+        <test-method status="PASS" signature="launchApp()[pri:0, instance:BVTTestCases.HomePageTestCases@370736d9]" name="launchApp" is-config="true" duration-ms="13906" started-at="2017-08-05T18:31:03Z" finished-at="2017-08-05T18:31:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApp -->
-        <test-method status="PASS" signature="changePassword()[pri:0, instance:BVTTestCases.MyAccountPageTestCase@5383967b]" name="changePassword" duration-ms="28106" started-at="2017-05-22T23:16:26Z" finished-at="2017-05-22T23:16:54Z">
+        <test-method status="PASS" signature="myAccountLinksText()[pri:0, instance:BVTTestCases.HomePageTestCases@370736d9]" name="myAccountLinksText" duration-ms="11414" started-at="2017-08-05T18:31:17Z" finished-at="2017-08-05T18:31:29Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- changePassword -->
-      </class> <!-- BVTTestCases.MyAccountPageTestCase -->
+        </test-method> <!-- myAccountLinksText -->
+        <test-method status="PASS" signature="closeApp()[pri:0, instance:BVTTestCases.HomePageTestCases@370736d9]" name="closeApp" is-config="true" duration-ms="257" started-at="2017-08-05T18:31:29Z" finished-at="2017-08-05T18:31:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+      </class> <!-- BVTTestCases.HomePageTestCases -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

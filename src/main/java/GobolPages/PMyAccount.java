@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import SeleniumGenric.DriverFunctionUtils;
 import SeleniumGenric.DriverUtils;
 
-public class PMyAccount  {
+public class PMyAccount {
 
 	@FindBy(xpath = "//div[@id='dashbord_navigation']/ul/ul/li[contains(text(),'Account Dashboard')]")
 	private WebElement accountDashBoard;
@@ -55,19 +55,23 @@ public class PMyAccount  {
 
 	@FindBy(xpath = "//div[@class='ai-first-row']/div[@class='ai-col-right']/div[@class='ai-head']/div[@class='edit']/a[text()='Edit']")
 	private WebElement editNewsLetterLink;
-	
-	@FindBy(xpath="//div[@class='ai-col-left']//div[@class='ai-cont']/a[contains(text(),'Change Password')]")
+
+	@FindBy(xpath = "//div[@class='ai-col-left']//div[@class='ai-cont']/a[contains(text(),'Change Password')]")
 	private WebElement changePasswordLink;
 
-	@FindBy(xpath="//div[@class='ai-second-row']/div[@class='ai-head']/div[@class='edit']/a[contains(text(),'Manage Address')]")
+	@FindBy(xpath = "//div[@class='ai-second-row']/div[@class='ai-head']/div[@class='edit']/a[contains(text(),'Manage Address')]")
 	private WebElement clickOnManageAddressLink;
-	
-	@FindBy(xpath=".//*[@id='topcontrol']/div")
+
+	@FindBy(xpath = ".//*[@id='topcontrol']/div")
 	private WebElement scrollBar;
-	
+
 	public void fn_clickOnAllLeftPanelLinks() {
 		DriverFunctionUtils.clickOnAllLinks(myAccountLeftPanel);
 
+	}
+	
+	public void fn_getAllLeftPanelLinksText(){
+		DriverFunctionUtils.getTextOfAllLinks(myAccountLeftPanel);
 	}
 
 	public String fn_getUserDashBoardName() {
@@ -77,16 +81,17 @@ public class PMyAccount  {
 
 	public PEditAccountInformtion fn_ClickOnEditLink() {
 		DriverFunctionUtils.clickOnWebelement(customerEditLink);
-		PEditAccountInformtion navigateToEditInformationPage=PageFactory.initElements(DriverUtils.driver, PEditAccountInformtion.class);
+		PEditAccountInformtion navigateToEditInformationPage = PageFactory.initElements(DriverUtils.driver,
+				PEditAccountInformtion.class);
 		return navigateToEditInformationPage;
 
 	}
-	
+
 	public void fn_ClickOnChangePasswordLink() {
 		DriverFunctionUtils.clickOnWebelement(changePasswordLink);
 
 	}
-	
+
 	public void fn_ClickOnManageAddressLink() {
 		DriverFunctionUtils.clickOnWebelement(clickOnManageAddressLink);
 
@@ -96,11 +101,11 @@ public class PMyAccount  {
 		DriverFunctionUtils.clickOnWebelement(customerEditLink);
 
 	}
-	
-	public void fn_ClickOnScrollBar(){
-		if(DriverFunctionUtils.isDisplayed(scrollBar)==true){
+
+	public void fn_ClickOnScrollBar() {
+		if (DriverFunctionUtils.isDisplayed(scrollBar) == true) {
 			DriverFunctionUtils.clickOnWebelement(scrollBar);
-		}else {
+		} else {
 			System.out.println("Scroll Bar is not Displayed.");
 		}
 	}

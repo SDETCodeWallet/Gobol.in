@@ -1,27 +1,19 @@
 package BVTTestCases;
 
-import java.util.List;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.Set;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.Capabilities;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.SearchContext;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.RemoteWebDriver;
-
-import SeleniumGenric.JavaScriptExecutor;
 
 public class GitClss {
 
 	public static void main(String[] args) {
-		factorial();
-		palidrome();
-
+		// arrayConcept();
+		// factorial();
+		// palindrome();
 	}
 
-	public static void palidrome() {
+	public static void palindrome() {
 		int r, sum = 0, temp;
 		String test = "shubham";
 		int t = test.length();
@@ -47,6 +39,36 @@ public class GitClss {
 	public static void fabanocciseries() {
 		int n1 = 0, n2 = 1, n3, i, count = 10;
 		System.out.println(n1 + "" + n2);
+
+	}
+
+	public static void arrayConcept() {
+		Object[] ar = { "shubham", "goyal", "passed" };
+		LinkedList<Object> inttest = new LinkedList<Object>();
+		inttest.add("Shubham");
+		inttest.add(786);
+		inttest.add("Goyal");
+		Iterator<Object> itr = inttest.listIterator();
+
+		while (itr.hasNext() == true) {
+			inttest.remove();
+			break;
+		}
+		System.out.println(inttest.get(0));
+		System.out.println(inttest.get(1));
+		System.out.println(inttest.get(2));
+		Set<Object> testset = new HashSet<Object>();
+
+		// testset.add("String");
+		// testset.add("String");
+		// testset.add("test");
+		// testset.add(52);
+		// testset.add("my name is khan");
+		//
+		// Iterator<Object> valuetest = testset.iterator();
+		// while (valuetest.hasNext() == true) {
+		// System.out.println(valuetest.next());
+		// }
 
 	}
 
